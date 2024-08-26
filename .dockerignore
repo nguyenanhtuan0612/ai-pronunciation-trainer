@@ -1,0 +1,5 @@
+venv
+.venv
+__pycache__
+README.md
+data_de_en_2.pickle

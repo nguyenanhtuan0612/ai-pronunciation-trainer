@@ -7,9 +7,11 @@ import AIModels
 import utilsFileIO
 import os
 import base64
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 sampling_rate = 16000
-model_TTS_lambda = AIModels.NeuralTTS(models.getTTSModel('de'), sampling_rate)
+model_TTS_lambda = AIModels.NeuralTTS(models.getTTSModel('en'), sampling_rate)
 
 
 def lambda_handler(event, context):
